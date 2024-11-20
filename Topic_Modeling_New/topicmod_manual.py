@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer
 
 # Cargar el archivo CSV
-file_path = r'C:\Universidad\2024-2\Seminario de Investigacion II\Topic_Modeling_New\textos_pysentimiento.csv'
+file_path = r'C:\Universidad\2024-2\Seminario de Investigacion II\Sentiment Analysis\Topic_Modeling_New\textos_pysentimiento.csv'
 data = pd.read_csv(file_path)
 
 # Asegurarse de tener las stopwords en español
@@ -65,7 +65,7 @@ data['dominant_topic'] = get_dominant_topic(lda_model, corpus)
 print(data[['Texto', 'texto_limpio', 'dominant_topic']].head())
 
 # Guardar el resultado en un nuevo archivo CSV
-output_file_path = r'C:\Universidad\2024-2\Seminario de Investigacion II\Topic_Modeling_New\textos_procesados_con_temas.csv'
+output_file_path = r'C:\Universidad\2024-2\Seminario de Investigacion II\Sentiment Analysis\Topic_Modeling_New\textos_procesados_con_temas.csv'
 data.to_csv(output_file_path, index=False)
 
 print('Dataset guardado')
