@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 file_path = r'C:\Universidad\2024-2\Seminario de Investigacion II\Sentiment Analysis\TextAug_Asignación_VADER_New\aug_text_utf.csv'
-df = pd.read_csv(file_path, encoding='ISO-8859-1')
+df = pd.read_csv(file_path, encoding='utf-8')
 
 # Inicializar el analizador VADER
 analyzer = SentimentIntensityAnalyzer()
